@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import {ideas} from './ConstIdeas'
+import Idea from './Idea.js'
+import IdeaForm from './IdeaForm'
 
 
 class IdeaContainer extends Component {
@@ -8,7 +10,8 @@ constructor(props){
   super(props);
 
   this.state = {
-    ideasarray: []
+    ideasarray: [],
+    isediting: false
   };
 }
 
@@ -17,19 +20,35 @@ console.log(ideas);
 this.setState({
   ideasarray: ideas
 })
+}
+addNewIdea=() => {
+  var obj = {};
+  obj["title"] = '';
+  obj["body"] = '';
+  ideas.push(obj)
+  this.setState({
+    ideasarray: ideas,
+    isediting: true
+  })
 
 }
-
   render(){
     return(
       <div>
+        <button className="newideabutton" onClick={this.addNewIdea}>
+          New Idea
+        </button>
         {this.state.ideasarray.map((idea) => {
+          if(this.state.isediting === true) {
+            return(
+              <IdeaForm idea={idea} />
+            )
+          }
+          else {
           return(
-            <div className="tile" key={idea.id}>
-              <h4>{idea.title}</h4>
-              <p>{idea.body}</p>
-            </div>
+            <Idea idea={idea}  />
           )
+        }
         } )}
       </div>
     );
