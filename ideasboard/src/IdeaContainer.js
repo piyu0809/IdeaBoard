@@ -11,7 +11,9 @@ constructor(props){
 
   this.state = {
     ideasarray: [],
-    isediting: false
+    isediting: false,
+    num: 100,
+    editingIdeaId: null
   };
 }
 
@@ -19,16 +21,22 @@ componentDidMount(){
 console.log(ideas);
 this.setState({
   ideasarray: ideas
+
 })
 }
 addNewIdea=() => {
   var obj = {};
+  var num1 = (this.state.num) + 1;
+  obj["id"] = num1;
   obj["title"] = '';
   obj["body"] = '';
+
   ideas.push(obj)
   this.setState({
     ideasarray: ideas,
-    isediting: true
+    num: num1,
+    editingIdeaId: obj.id
+
   })
 
 }
@@ -39,14 +47,14 @@ addNewIdea=() => {
           New Idea
         </button>
         {this.state.ideasarray.map((idea) => {
-          if(this.state.isediting === true) {
+          if(this.state.editingIdeaId === idea.id) {
             return(
-              <IdeaForm idea={idea} />
+              <IdeaForm idea={idea} key={idea.id}  />
             )
           }
           else {
           return(
-            <Idea idea={idea}  />
+            <Idea idea={idea} key={idea.id}  />
           )
         }
         } )}
