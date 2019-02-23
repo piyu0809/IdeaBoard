@@ -22,7 +22,6 @@ class IdeaForm extends Component {
     const idea = {id: this.props.id , title: this.state.title , body: this.state.body};
     console.log(idea);
     ideas.push(idea);
-    console.log(ideas);
   }
 
   render(){
