@@ -49,7 +49,7 @@ addNewIdea=() => {
         {this.state.ideasarray.map((idea) => {
           if(this.state.editingIdeaId === idea.id) {
             return(
-              <IdeaForm idea={idea} key={idea.id} />
+              <IdeaForm idea={idea} key={idea.id} id={idea.id} />
             )
           }
           else {

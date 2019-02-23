@@ -17,10 +17,14 @@
   height: 250px;
   width: 250px;
   margin: 10px;
-  background: #192a56;
+  background: #22a6b3;
   float: left;
-  font-size: 15px;
+  font-size: 16px;
   text-align: left;
+  color: black;
+}
+.tile:hover {
+  background-color: #82ccdd;
 }
 .newideabutton{
   display: inline-block;
@@ -40,5 +44,15 @@ float: left;
 .newideabutton:hover {background-color: #4CAF50 }
 
 h4{
-  color: #4CAF50;
+  color: #0a3d62;
+  font-size: 20px;
+}
+.input:focus {
+  border: solid 1px lightgrey;
+}
+
+textarea {
+  resize: none;
+  height: 90px;
+  font-size: 11px;
 }
