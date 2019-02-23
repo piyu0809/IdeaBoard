@@ -42,14 +42,14 @@ addNewIdea=() => {
 }
   render(){
     return(
-      <div>
+      <div className="container">
         <button className="newideabutton" onClick={this.addNewIdea}>
           New Idea
         </button>
         {this.state.ideasarray.map((idea) => {
           if(this.state.editingIdeaId === idea.id) {
             return(
-              <IdeaForm idea={idea} key={idea.id}  />
+              <IdeaForm idea={idea} key={idea.id} />
             )
           }
           else {
