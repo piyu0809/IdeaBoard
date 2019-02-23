@@ -31,12 +31,13 @@ text-align: center;
 text-decoration: none;
 outline: none;
 color: #fff;
-background-color: #4CAF50;
+background-color: #05c46b;
 border: none;
 border-radius: 15px;
 box-shadow: 0 9px #999;
 float: left;
 }
+.newideabutton:hover {background-color: #4CAF50 }
 
 h4{
   color: #4CAF50;
