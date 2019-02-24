@@ -22,17 +22,18 @@ class IdeaForm extends Component {
     const idea = {id: this.props.id , title: this.state.title , body: this.state.body};
     console.log(idea);
     ideas.push(idea);
+    console.log(ideas);
   }
 
   render(){
     return(
       <div className="tile">
-        <form>
+        <form onBlur={this.handleBlur}>
           <input className='input' type="text" name="title" placeholder='Enter a Title'
-            value={this.state.title} onChange={this.handleInput} onBlur={this.handleBlur} />
+            value={this.state.title} onChange={this.handleInput}  />
           <textarea className='input' name="body" placeholder='Describe your idea'
-            value={this.state.body} onChange={this.handleInput} onBlur={this.handleBlur}></textarea>
-        </form>
+            value={this.state.body} onChange={this.handleInput} ></textarea>
+        </form >
       </div>
     );
   }
