@@ -54,9 +54,10 @@ addNewIdea=() => {
           else {
           return(
             <Idea idea={idea} key={idea.id}  />
-          )
+            )
+          }
         }
-        } )}
+    )}
       </div>
     );
   }
