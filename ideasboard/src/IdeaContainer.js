@@ -21,7 +21,6 @@ componentDidMount(){
 console.log(ideas);
 this.setState({
   ideasarray: ideas
-
 })
 }
 addNewIdea=() => {
@@ -49,7 +48,7 @@ addNewIdea=() => {
         {this.state.ideasarray.map((idea) => {
           if(this.state.editingIdeaId === idea.id) {
             return(
-              <IdeaForm idea={idea} key={idea.id} id={idea.id} />
+              <IdeaForm idea={idea} key={idea.id} id={this.state.num} />
             )
           }
           else {

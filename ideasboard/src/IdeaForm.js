@@ -21,7 +21,8 @@ class IdeaForm extends Component {
     console.log("handleBlur");
     const idea = {id: this.props.id , title: this.state.title , body: this.state.body};
     console.log(idea);
-    ideas.push(idea);
+    ideas = [...ideas, idea];
+  //  ideas.push(idea);
     console.log(ideas);
   }
 
