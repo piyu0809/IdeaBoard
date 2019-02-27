@@ -13,7 +13,9 @@ constructor(props){
     ideasarray: [],
     isediting: false,
     num: 100,
-    editingIdeaId: null
+    editingIdeaId: null,
+    title: '',
+    body: ''
   };
 }
 
@@ -22,6 +24,21 @@ console.log(ideas);
 this.setState({
   ideasarray: ideas
 })
+}
+handleInput = (e) => {
+  console.log("handleInput");
+  this.setState({
+    [e.target.name]: e.target.value
+  })}
+handleBlur = () => {
+  console.log("handleBlur");
+  const idea = {id: this.state.num , title: this.state.title , body: this.state.body};
+  console.log(idea);
+  ideas = [...ideas, idea];
+  this.setState({
+    ideasarray: ideas
+  })
+  console.log(ideas);
 }
 addNewIdea=() => {
   var obj = {};
@@ -48,8 +65,14 @@ addNewIdea=() => {
         {this.state.ideasarray.map((idea) => {
           if(this.state.editingIdeaId === idea.id) {
             return(
-              <IdeaForm idea={idea} key={idea.id} id={this.state.num} />
-            )
+              <div className="tile">
+                <form onBlur={this.handleBlur}>
+                  <input className='input' type="text" name="title" placeholder='Enter a Title'
+                    value={this.state.title} onChange={this.handleInput}  />
+                  <textarea className='input' name="body" placeholder='Describe your idea'
+                    value={this.state.body} onChange={this.handleInput} ></textarea>
+                </form >
+              </div>            )
           }
           else {
           return(
