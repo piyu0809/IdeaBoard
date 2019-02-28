@@ -23,28 +23,25 @@ componentDidMount(){
 console.log(ideas);
 this.setState({
   ideasarray: ideas
-})
-}
+})}
+
 handleInput = (e) => {
   console.log("handleInput");
   this.setState({
     [e.target.name]: e.target.value
   })}
+
 handleBlur = () => {
   console.log("handleBlur");
   const idea = {id: this.state.num , title: this.state.title , body: this.state.body};
   console.log(idea);
-
   if(idea["title"] !== '' && idea["body"] !== ''){
       console.log("idea pushed to array");
       ideas.push(idea);
   }
-
-  //ideas = [...ideas, idea];
   this.setState({
     ideasarray: ideas
   })
-  
   console.log(ideas);
 }
 
@@ -60,7 +57,6 @@ addNewIdea=() => {
     num: num1,
     editingIdeaId: obj.id
   })
-
 }
   render(){
     return(
