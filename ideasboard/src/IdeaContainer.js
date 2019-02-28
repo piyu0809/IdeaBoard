@@ -44,13 +44,7 @@ handleBlur = () => {
   this.setState({
     ideasarray: ideas
   })
-  for (var index = 0; index < (this.state.ideasarray).length; index++) {
-  const  ideaa = this.state.ideasarray[index];
-  if(ideaa["title"] === '' && idea["body"] === ''){
-    ideas.pop(ideaa);
-    console.log("idea popped");
-  }
-  }
+  
   console.log(ideas);
 }
 
