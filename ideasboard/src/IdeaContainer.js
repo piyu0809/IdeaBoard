@@ -34,25 +34,37 @@ handleBlur = () => {
   console.log("handleBlur");
   const idea = {id: this.state.num , title: this.state.title , body: this.state.body};
   console.log(idea);
-  ideas = [...ideas, idea];
+
+  if(idea["title"] !== '' && idea["body"] !== ''){
+      console.log("idea pushed to array");
+      ideas.push(idea);
+  }
+
+  //ideas = [...ideas, idea];
   this.setState({
     ideasarray: ideas
   })
+  for (var index = 0; index < (this.state.ideasarray).length; index++) {
+  const  ideaa = this.state.ideasarray[index];
+  if(ideaa["title"] === '' && idea["body"] === ''){
+    ideas.pop(ideaa);
+    console.log("idea popped");
+  }
+  }
   console.log(ideas);
 }
+
 addNewIdea=() => {
   var obj = {};
   var num1 = (this.state.num) + 1;
   obj["id"] = num1;
   obj["title"] = '';
   obj["body"] = '';
-
-  ideas.push(obj)
+  ideas.push(obj);
   this.setState({
     ideasarray: ideas,
     num: num1,
     editingIdeaId: obj.id
-
   })
 
 }
@@ -66,18 +78,26 @@ addNewIdea=() => {
           if(this.state.editingIdeaId === idea.id) {
             return(
               <div className="tile">
-                <form onBlur={this.handleBlur}>
+                <form >
                   <input className='input' type="text" name="title" placeholder='Enter a Title'
                     value={this.state.title} onChange={this.handleInput}  />
                   <textarea className='input' name="body" placeholder='Describe your idea'
-                    value={this.state.body} onChange={this.handleInput} ></textarea>
+                    value={this.state.body} onChange={this.handleInput} onBlur={this.handleBlur} ></textarea>
                 </form >
               </div>            )
           }
           else {
-          return(
+            if(idea.title === '' && idea.body === ''){
+              return(
+                <div>
+                </div>
+              )
+            }
+          else {
+            return(
             <Idea idea={idea} key={idea.id}  />
-            )
+              )
+            }
           }
         }
     )}
