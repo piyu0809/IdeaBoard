@@ -12,38 +12,38 @@ export const ideas  = [
   },
   {
     id: 3,
-    title: 'ksjakljsalkj',
-    body: 'kslkdnskdskdjsdjsnd'
+    title: 'Business ideas',
+    body: 'Creative hobbyists and professionals working in design, art, and programming continually looking for ways to develop their skills.'
   },
   {
     id: 4,
-    title: 'ksjakljsalkj',
-    body: 'kslkdnskdskdjsdjsnd'
+    title: 'Design, programming, and art',
+    body: 'Creative hobbyists and professionals working in design, art, and programming continually looking for ways to develop their skills.'
   },
   {
     id: 5,
-    title: 'ksjakljsalkj',
-    body: 'kslkdnskdskdjsdjsnd'
+    title: 'Home, health, & faith',
+    body: 'From gardening to home organization, many creators have found success by teaching on topics completely unrelated to business.'
   },
   {
     id: 6,
-    title: 'ksjakljsalkj',
-    body: 'kslkdnskdskdjsdjsnd'
+    title: 'Marketing',
+    body: 'Business owners and marketing professionals are constantly looking to acquire new customers and clients for their business.'
   },
   {
     id: 7,
-    title: 'ksjakljsalkj',
-    body: 'kslkdnskdskdjsdjsnd'
+    title: 'Personal development',
+    body: 'Everyone wants to improve. That’s why there are countless opportunities to create products based on personal development. '
   },
   {
     id: 8,
-    title: 'ksjakljsalkj',
-    body: 'kslkdnskdskdjsdjsnd'
+    title: 'Telling computers and humans apart',
+    body: 'well-known cyber security tool designed to protect web sites from hackers'
   },
   {
     id: 9,
-    title: 'ksjakljsalkj',
-    body: 'kslkdnskdskdjsdjsnd'
+    title: ' Turning a bad customer behavior into a profitable business model',
+    body: 'Far from being just a convenient way to “borrow” a dress, the RTR model adapted a male concept (i.e. tuxedo renting) to feminine fashion, added the “experiential marketing” '
   }
 ]
 
