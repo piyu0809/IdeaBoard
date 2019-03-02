@@ -6,5 +6,5 @@ You can add ideas, edit existing ideas.
 #### Initial Screen
 ![Initial Screen](ideaboard.png)
 
-### To add new idea (Chat Screen)
+### To add new idea
 ![After add new idea](idea2.png)
