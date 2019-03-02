@@ -1,13 +1,13 @@
 export const ideas  = [
   {
     id: 1,
-    title: 'Yellow Pail',
-    body: 'kajdhksjdsajjadnjahda'
+    title: 'Build',
+    body: 'Build an React Idea board'
   },
   {
     id: 2,
-    title: 'Green Pail',
-    body: 'kdlajakdhjakshjka'
+    title: 'Create Excel',
+    body: 'Make excel of all the expense'
 
   },
   {
